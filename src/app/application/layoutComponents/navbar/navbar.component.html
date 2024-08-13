@@ -1,0 +1,47 @@
+<!-- <mat-divider></mat-divider> -->
+<div class="side-nav-content d-none d-lg-block">
+  <mat-nav-list>
+      <a mat-list-item
+          [routerLink]="['/application/dashboard']" [routerLinkActive]="['active']"
+          (keydown.escape)="$event.stopPropagation()">
+          <span class="icon">
+              <img src="../../../assets/images/appsdashIcon.png" style="width:30px;height: 30px;">
+          </span>
+          <span class="listname">
+            Dashboard
+        </span>
+      </a>
+
+      <a mat-list-item
+          [routerLink]="['/application/manage-employee']" [routerLinkActive]="['active']">
+          <span class="icon">
+              <img src="../../../assets/images/EMPBlack3People.png" style="width:30px;height: 30px;">
+          </span>
+          <span class="listname">
+            All employee
+         </span>
+      </a>
+
+
+      <a mat-list-item
+          [routerLink]="['/manage-employee/add-employee']" [routerLinkActive]="['active']"
+          (keydown.escape)="$event.stopPropagation()">
+          <span class="icon">
+              <img src="../../../assets/images/communityAll DepIcon.png" style="width:30px;height: 30px;">
+          </span>
+          <span class="listname">
+            All department
+         </span>
+      </a>
+
+
+      <a mat-list-item [routerLinkActive]="['active']" (keydown.escape)="$event.stopPropagation()">
+          <span class="icon">
+              <img src="../../../assets/images/calendar-checkAttendanceIcon.png" style="width:30px;height: 30px;">
+          </span>
+          <div class="listname">
+            Attendance
+        </div>
+      </a>
+  </mat-nav-list>
+</div>

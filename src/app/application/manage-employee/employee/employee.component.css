@@ -1,0 +1,50 @@
+table{
+  width:100%;
+}
+.viewall{
+  border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: white;
+    white-space: nowrap;
+}
+.permanent{
+  background-color: var(--backgroundColor);
+  color: var(--purple);
+  padding:5px 10px;
+}
+.searchIcon{
+  position: absolute;
+    top: 34px;
+    left: 36px;
+}
+.search input{
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 10px;
+  padding-left: 50px;
+  width: 100%;
+}
+.addemp{
+  border: none;
+  background: var(--purple);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 400 !important;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+td button{
+  padding: 5px;
+}
+:host::ng-deep.mat-header-cell, td.mat-cell{
+  white-space: nowrap;
+  padding: 0px 10px;
+}
+.table-container{
+  width: 100%;
+  overflow-x: auto;
+}

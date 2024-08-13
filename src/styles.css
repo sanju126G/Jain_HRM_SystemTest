@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: var(--purple);
+}
+a{
+  text-decoration: none;
+  font-size: 14px;
+}
+.mat-paginator-range-label{
+  white-space: nowrap;
+}
+
+
+:root {
+  --backgroundColor: #7152F30D;
+  --green: #30BE82;
+  --red:#F45B69;
+  --purple:#7152F3;
+}
+

@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="navbar-brand">
+      <div class="heading">
+        <ng-container *ngIf="getCurrentView() === 'dashboard'; else employeeView">
+          <h1 class="mb-1 fw-bold">Hello Robbert</h1>
+          <h5>Good morning</h5>
+        </ng-container>
+
+        <ng-template #employeeView>
+          <ng-container *ngIf="getCurrentView() === 'employees'; else addEmployeeView">
+            <h1 class="mb-1 fw-bold">All Employees</h1>
+            <h5>All Employee Information</h5>
+          </ng-container>
+
+          <ng-template #addEmployeeView>
+            <ng-container *ngIf="getCurrentView() === 'addEmployee'">
+              <h1 class="mb-1 fw-bold">Add New Employee</h1>
+              <h5>
+                <a class="text-dark" routerLink="/application/manage-employee">Employee</a> &nbsp; > &nbsp;
+                <a class="text-dark" routerLink="/application/manage-employee/addemployee">Add New Employee</a>
+              </h5>
+            </ng-container>
+          </ng-template>
+        </ng-template>
+      </div>
+    </div>
+    <button class="navbar-toggler" type="button" [attr.aria-expanded]="!isNavbarCollapsed" aria-controls="navbarNav"
+      (click)="toggle()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'d-block': !isNavbarCollapsed}" id="navbarSupportedContent">
+      <div class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="d-block d-lg-none p-0">
+          <li>
+            <a [routerLink]="['/application/dashboard']" [routerLinkActive]="['active']"
+              (keydown.escape)="$event.stopPropagation()">
+              <span class="icon">
+                <img src="../../../assets/images/appsdashIcon.png" style="width:30px;height: 30px;">
+              </span>
+              <span class="listname">
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/application/manage-employee']" [routerLinkActive]="['active']">
+              <span class="icon">
+                <img src="../../../assets/images/EMPBlack3People.png" style="width:30px;height: 30px;">
+              </span>
+              <span class="listname">
+                All employee
+              </span>
+            </a>
+          </li>
+          <li>
+
+            <a [routerLink]="['/manage-employee/add-employee']" [routerLinkActive]="['active']"
+              (keydown.escape)="$event.stopPropagation()">
+              <span class="icon">
+                <img src="../../../assets/images/communityAll DepIcon.png" style="width:30px;height: 30px;">
+              </span>
+              <span class="listname">
+                All department
+              </span>
+            </a>
+
+
+          </li>
+
+        </ul>
+      </div>
+      <div class="headingcontent form-inline d-flex align-items-center justify-content-start">
+        <div class="search  mb-sm-0 mb-3">
+          <img class="searchIcon" src="../../../assets/images/Search_Icon.png">
+          <input type="text" class="searchInput" placeholder="Search">
+        </div>
+        <div class="ms-sm-3 mb-sm-0 mb-3">
+          <button class="notification"><img src="../../../assets/images/notification.png" alt=""></button>
+        </div>
+        <div class="ms-sm-3 d-flex align-items-center,justify-content-center">
+          <img src="../../../assets/images/tABLE pROFILE iMAGES/profile8.png"  class="imgCss" alt="">
+          <mat-form-field appearance="fill">
+            <mat-label>
+                <h1 class="fw-bold">Robert Allen</h1>
+            </mat-label>
+            <mat-select disableRipple placeholder="HR Manager" [(value)]="selected">
+              <mat-option value="1">HR Manager</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

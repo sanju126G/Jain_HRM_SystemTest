@@ -1,0 +1,62 @@
+table{
+  width:100%;
+}
+.viewall{
+  border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+.icon{
+  background-color: var(--backgroundColor);
+  padding: 10px;
+  border-radius: 10px;
+}
+.percent{
+  background: #e1f4ec;
+  color: var(--green);
+  padding: 4px 9px 4px 3px;
+  border-radius: 6px;
+}
+.redpercent{
+  background: #fad6d9;
+    color: var(--red);
+    padding: 4px 9px 4px 3px;
+    border-radius: 6px;
+}
+.bg-green{
+  background: #e1f4ec;
+  color: var(--green);
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+.bg-red{
+  background: #fad6d9;
+    color: var(--red);
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+.footer h4{
+  color: gray;
+}
+.calender{
+  background:var(--backgroundColor);
+  padding: 5px 10px;
+}
+.verticalline{
+  background: linear-gradient(102.3deg, var(--purple) 5.9%, rgb(228 187 227) 64%, rgb(247 247 247) 89%);
+  width: 2px;
+  height: 100%;
+}
+.calenderevents .time{
+  white-space: nowrap;
+}
+:host::ng-deep.mat-header-cell, td.mat-cell{
+  white-space: nowrap;
+  padding: 0px 10px;
+}
+
+.table-container{
+  width: 100%;
+  overflow-x: auto;
+}

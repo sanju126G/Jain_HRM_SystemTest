@@ -1,0 +1,6 @@
+:host::ng-deep.mat-drawer-side {
+  border-right: none;
+}
+:host::ng-deep.mat-drawer-container {
+  height: 100%;
+}
